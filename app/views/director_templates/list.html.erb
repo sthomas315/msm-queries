@@ -9,7 +9,7 @@
 <th> </th>
 </tr>
 
-<%= Director.all.each do |a_director|%>
+<% Director.all.each do |a_director|%>
 <tr>
 <td><%= a_director.id %></td>
 <td>
@@ -27,6 +27,3 @@
 </table>
 
 
-<li>
-<%= a_director.name %> (<%= a_director.dob %>)
-</li>
