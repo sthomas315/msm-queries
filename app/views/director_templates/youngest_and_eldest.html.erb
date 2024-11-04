@@ -3,8 +3,8 @@
 <a href="/directors">Go back</a>
 
 <% if @the_youngest.present? %>
-  <p>The youngest director in our dataset right now is <%= @the_director.name %>, born on <%= @the_director.dob.strftime("%B %d, %Y") %>.</p>
+  <p>The youngest director in our dataset right now is <%= link_to @the_youngest.name, director_path(@the_director) %>, born on <%= @the_youngest.dob.strftime("%B %d, %Y") %>.</p>
 
 <% elsif @the_eldest.present? %>
-  <p>The oldest director in our dataset right now is <%= @the_director.name %>, born on <%= @the_director.dob.strftime("%B %d, %Y") %>.</p>
+  <p>The oldest director in our dataset right now is <%= @the_eldest.name %>, born on <%= @the_eldest.dob.strftime("%B %d, %Y") %>.</p>
 <% end %>
