@@ -1,0 +1,10 @@
+<h1><%= @page_title %></h1>
+
+<a href="/directors">Go back</a>
+
+<% if @the_youngest.present? %>
+  <p>The youngest director in our dataset right now is <%= @the_director.name %>, born on <%= @the_director.dob.strftime("%B %d, %Y") %>.</p>
+
+<% elsif @the_eldest.present? %>
+  <p>The oldest director in our dataset right now is <%= @the_director.name %>, born on <%= @the_director.dob.strftime("%B %d, %Y") %>.</p>
+<% end %>
