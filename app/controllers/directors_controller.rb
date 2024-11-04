@@ -15,16 +15,13 @@ end
 def youngest
   youngest_records = Director.where.not({ :dob => nil }).order({ :dob => :asc })
   @the_youngest = youngest_records.at(0)
-  @page_title = "Youngest Director"
-  render({ :template => "director_templates/youngest_and_eldest" })
+  render({ :template => "director_templates/youngest.html.erb" })
 end
 
 def eldest
   oldest_records = Director.where.not({ :dob => nil }).order({ :dob => :desc })
   @the_oldest = oldest_records.at(0)
-  @page_title = "Oldest Director"
-  
-  render({ :template => "director_templates/youngest_and_eldest" })
+  render({ :template => "director_templates/eldest.html.erb" })
 end
 
 end
